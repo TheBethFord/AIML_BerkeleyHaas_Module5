@@ -7,7 +7,7 @@ Assignment 5.1 is a python project showing my ability to complete the first thre
 If you want to contact me you can reach me at contactbethford@gmail.com
 
 ## Files
-* 51.ipynb
+* AIML_B2C_Coupon.ipynb
 * Data comes from the UCI Machine Learning repository and was collected via a survey on Amazon Mechanical Turk
 
 ## Objective
