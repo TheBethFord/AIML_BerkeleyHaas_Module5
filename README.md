@@ -2,8 +2,6 @@
 
 Assignment 5.1 is a python project showing my ability to complete the first three phases of the CRISP-DM Methodology: *Business Undersatnding, Data Understanding and Data Preparation.  
 
-## Contributors
-[Beth Ford]<https://github.com/TheBethFord>
 
 ## Contact 
 If you want to contact me you can reach me at contactbethford@gmail.com
