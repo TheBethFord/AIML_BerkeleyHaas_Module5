@@ -14,7 +14,7 @@ If you want to contact me you can reach me at contactbethford@gmail.com
 * Data comes from the UCI Machine Learning repository and was collected via a survey on Amazon Mechanical Turk
 
 ## Objective
-In this project we are looking to understand the differences between drivers who did and di not accept the coupon 
+In this project we are looking to understand the differences between drivers who did and did not accept the coupon 
 
 ## Findings
 
@@ -26,6 +26,7 @@ In this project we are looking to understand the differences between drivers who
 
 **Coupon Types & Redemptions**
 - When passengers were traveling with friends, kids or a partner, coupon use was strong when they were not in a rush 
+![Traveling With Passenger Image](PassengerTypes.jpg "TPassenger Type to Destinations")
 - Most popular coupon for females is takeaway, followed by casual dining
 - Males also prefer takeaway, but have a significant preference for bar coupons
 - Fine dining is the least popular coupon overall
