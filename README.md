@@ -7,7 +7,9 @@ Assignment 5.1 is a python project showing my ability to complete the first thre
 If you want to contact me you can reach me at contactbethford@gmail.com
 
 ## Files
-* AIML_B2C_Coupon.ipynb
+* AIML_B2C_Coupon.ipynb - Main python script with full charting and data
+* CouponByGender.jpg - Bar graph that shows coupons redemption by type and gender
+* PassengerTypes.jpg - Visual to show how redeemed coupons decline with a passenger when they do not have time 
 * README.md
 * Data comes from the UCI Machine Learning repository and was collected via a survey on Amazon Mechanical Turk
 
@@ -57,5 +59,3 @@ In this project we are looking to understand the differences between drivers who
 - Try to increase spend for drivers with high income that use coupons by pointing them to higher cost items
 - Change bar coupon creative to target bar coupons to females
 - Update coffee house creative to highlight hot drinks at coffee house to warm drinks in cold weather
-
-
