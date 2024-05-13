@@ -8,6 +8,7 @@ If you want to contact me you can reach me at contactbethford@gmail.com
 
 ## Files
 * AIML_B2C_Coupon.ipynb
+* README.md
 * Data comes from the UCI Machine Learning repository and was collected via a survey on Amazon Mechanical Turk
 
 ## Objective
@@ -41,13 +42,14 @@ In this project we are looking to understand the differences between drivers who
 - Most coupons are redeemed at 10am, but very few redeemed when it is below freezing
 - Coffee houses have the most coupons that expire quickly in 2 hours (962) 
 
-**Fine Dining ($20-50)
+**Fine Dining ($20-50)**
 - Fine dining coupons are used the most in warmer temperatures
 - 75.7% of all coupons expire in 24 hours
 
 **Casual coupons ($20)**
 - 6pm and 80 degrees is the most popular time
 - Coupons that are geolocated more than 25 minutes, are not very successful, in this case only 101 redeemed
+
 
 ## Recommendations
 - Drivers are not redeeming coupons that are greater than 15 minutes from their location.  Increase reinvestment for drivers that are not in a rush and more than 15 minutes away 
