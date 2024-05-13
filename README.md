@@ -26,11 +26,12 @@ In this project we are looking to understand the differences between drivers who
 
 **Coupon Types & Redemptions**
 - When passengers were traveling with friends, kids or a partner, coupon use was strong when they were not in a rush 
-![Traveling With Passenger Image](PassengerTypes.jpg "TPassenger Type to Destinations")
-- Most popular coupon for females is takeaway, followed by casual dining
-- Males also prefer takeaway, but have a significant preference for bar coupons
+![Traveling With Passenger Image](PassengerTypes.jpg "Coupons used more when not in a rush")
 - Fine dining is the least popular coupon overall
 - People that are alone redeem more coupons
+- Most popular coupon for females is takeaway, followed by casual dining
+- Males also prefer takeaway, but have a significant preference for bar coupons
+![Redemption by Gender](CouponByGender.jpg "Males prefer bar, females takeaway and casual")
 
 **Bar Coupons**
 - 41% of bar coupons were redeemed
