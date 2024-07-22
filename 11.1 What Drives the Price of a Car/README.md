@@ -7,57 +7,44 @@ Assignment 11.1 is a python project showing my ability to apply the full CRISP=D
 If you want to contact me you can reach me at contactbethford@gmail.com
 
 ## Files
-* AIML_B2C_Coupon.ipynb - Main python script with full charting and data
-* CouponByGender.jpg - Bar graph that shows coupons redemption by type and gender
-* PassengerTypes.jpg - Visual to show how redeemed coupons decline with a passenger when they do not have time 
+* 11.1.ipynb - Main python script with full charting and data
+* Ridge Coefficients Greater Than .25.png - Bar graph that shows top drivers of price
+* Ridge Coefficients Less Than -.1.png - Bar graph that shows top detractors of price
 * README.md
-* Data comes from a used car data set of 426K rows provided from Berkely through coursework for AI/ML originally from Kaggle with 3 million records
 
 ## Objective
 In this project we are looking to understand what factors make a car more or less expensive
 
-## Findings
+## Methodology
 
-**Overall**
-- 7210 coupons were redeemed, 56.8% of total coupons
-- Drivers that redeem coupons are slightly younger
-- More drivers with incomes $100K, used a coupon (57.8%) 
-- More coupons are redeemed at 6pm than any other time of day
+As the objective was to make recommendations to used car dealerships, I first removed cars that were considered luxury, with the average proce of a Lamborghini being $222K.
 
-**Coupon Types & Redemptions**
-- When passengers were traveling with friends, kids or a partner, coupon use was strong when they were not in a rush 
-![Traveling With Passenger Image](PassengerTypes.jpg "Coupons used more when not in a rush")
-- Fine dining is the least popular coupon overall
-- People that are alone redeem more coupons
-- Most popular coupon for females is takeaway, followed by casual dining
-- Males also prefer takeaway, but have a significant preference for bar coupons
-![Redemption by Gender](CouponByGender.jpg "Males prefer bar, females takeaway and casual")
+I then only looked at cars that were 2014 and older as technology and features in cars has changed so drastically from more than 10 years ago.
 
-**Bar Coupons**
-- 41% of bar coupons were redeemed
-- The younger that the driver is and the more on their own, the more they redeem bar coupons
-- Bar coupons are successful in getting people who have never been to a bar to redeem
+The data quality was lacking.  With descriptive fields like color with so many missing values, they were removed from the data set.
 
-**Carry Away Coupons**
-- Most Carry Out coupons are used for breakfast
-- The least popular time is 2pm
+**Modeling:**
+- 151,550 records
+- Seven fields (price, age, odometer_log, fuel, transmission, type, manufacturer, drive)
+- I ran feature selection with Lasso to see what features had zero coefficients
+- I ran a GridSearchCV and found that alpha=10 was the best parameter and for Lasso, 0.01
+- I ran three types of regression models (Linear, Ridge and Lasso) with the best hyperparameters
+- Cross validation of scores returned very similary results as test
 
-**Coffee Coupons**
-- Most coupons are redeemed at 10am, but very few redeemed when it is below freezing
-- Coffee houses have the most coupons that expire quickly in 2 hours (962) 
 
-**Fine Dining ($20-50)**
-- Fine dining coupons are used the most in warmer temperatures
-- 75.7% of all coupons expire in 24 hours
+**Overall Findings**
+- Ridge model was the best performing model, indicating that the larger price values may need to be handled differently
+- The R2 was only .3186 indiacting that this model may only be identifying approximately one-third of the drivers for this model.
 
-**Casual coupons ($20)**
-- 6pm and 80 degrees is the most popular time
-- Coupons that are geolocated more than 25 minutes, are not very successful, in this case only 101 redeemed
-
+**Coefficients**
+- Top luxury manufacturers like ferrari and porsche drove the highest price.  When not looking at manufacturers, convertibles had the largest coefficient great than .6
+- Harley Davidson drove the lowest price but this is most likely due to the harley being a motorcycle so inherently less expensive than a car
+- Fuel type was also not a driver of price with coefficients less than -0.5
 
 ## Recommendations
-- Drivers are not redeeming coupons that are greater than 15 minutes from their location.  Increase reinvestment for drivers that are not in a rush and more than 15 minutes away 
-- Carry out is successful in the morning.  Look at a campaign that targets drivers on the way home from work to get dinners for their families. 
-- Try to increase spend for drivers with high income that use coupons by pointing them to higher cost items
-- Change bar coupon creative to target bar coupons to females
-- Update coffee house creative to highlight hot drinks at coffee house to warm drinks in cold weather
+- Keep more Trucks and Convertibles in stock as this will increase your the dealer's prices.  See image "Ridge Coefficients Greater than .25".png
+-  Rear Wheel Drive (RWD) is a stronger driver than Front Wheel Drive (FWD) See image "Ridge Coefficients Less Than -.1".png
+- Car manufacturer is key.
+- The created field 'age' might have had multicolinearity with the odometer log, but age had a much higher negative impact than odometer. 
+- Ask the client specifics on types of manufacturers they will have on their lot.  This may get rid of some luxury vehicles examined for better results.
+- Data quality was an issue here with alot of nulls.  Try running some models on smaller data sets that have more fields to consider in the regression models.
